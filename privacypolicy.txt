@@ -1,0 +1,21 @@
+PRIVACY POLICY
+Last Updated: November 2026
+
+1. OVERVIEW
+This website provides informational resources and download links for device maintenance and diagnostic utilities. We respect your privacy and are committed to transparency regarding any data collected while you use our site.
+
+2. INFORMATION WE COLLECT
+- Log Data: Like most static and hosted web servers, standard access logs (such as IP address, browser type, referring page, and timestamp) may be temporarily recorded by our hosting infrastructure (e.g., Vercel) for performance monitoring and security.
+- Cookies & Analytics: We do not use persistent tracking cookies, sell personal data, or require user registration or account creation.
+
+3. THIRD-PARTY SERVICES & EXTERNAL DOWNLOADS
+- Our download links route to third-party file storage services (e.g., Google Drive, Mega).
+- When you click a download link or mirror, you interact directly with that third-party provider. Those third parties operate under their own privacy policies and terms of service.
+- We do not manage or store your personal files, Google accounts, or telemetry data on this server.
+
+4. SOFTWARE USAGE DISCLAIMER
+- All tools, drivers, and firmware utilities linked on this portal are provided strictly for educational, research, and authorized diagnostic/repair use.
+- Users are solely responsible for ensuring compliance with local laws and device manufacturer guidelines before downloading or applying any tool.
+
+5. CONTACT & INQUIRIES
+If you have questions about this policy or any content hosted or linked here, please contact us via our official support channels or community groups.

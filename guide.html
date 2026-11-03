@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation & User Guide - GSM Tools Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/20">
+          GT
+        </div>
+        <span class="text-lg font-bold tracking-tight text-white">GSM Tools Hub</span>
+      </div>
+      <a href="index.html" class="text-xs uppercase font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-md transition-all border border-slate-700">
+        &larr; Back to Downloads
+      </a>
+    </div>
+  </header>
+
+  <!-- Content Container -->
+  <main class="flex-1 max-w-4xl mx-auto px-4 py-12 w-full space-y-10">
+
+    <!-- Title -->
+    <div>
+      <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Documentation</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Installation & Operational Guide</h1>
+      <p class="text-slate-400 text-sm sm:text-base mt-2">
+        Complete step-by-step setup instructions, driver installation order, and diagnostic error handling.
+      </p>
+    </div>
+
+    <!-- Step-by-Step Instructions -->
+    <section class="space-y-6">
+
+      <!-- Step 1 -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="h-7 w-7 rounded-full bg-blue-600/20 border border-blue-500 text-blue-400 font-mono font-bold text-sm flex items-center justify-center">1</span>
+          <h2 class="text-lg font-bold text-white">Prerequisites & System Preparation</h2>
+        </div>
+        <ul class="list-disc list-inside space-y-2 text-sm text-slate-300 ml-2">
+          <li>Ensure Windows 10 or Windows 11 (64-bit) is updated.</li>
+          <li>Install the <strong>Microsoft Visual C++ Redistributable 2015–2022 (x64)</strong> package.</li>
+          <li>Temporarily disable third-party antivirus heuristics if the utility is falsely flagged during memory injection.</li>
+        </ul>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="h-7 w-7 rounded-full bg-blue-600/20 border border-blue-500 text-blue-400 font-mono font-bold text-sm flex items-center justify-center">2</span>
+          <h2 class="text-lg font-bold text-white">Extracting the Utility</h2>
+        </div>
+        <p class="text-sm text-slate-300 mb-3 leading-relaxed">
+          Do not run the tool directly from within the compressed archive. Extracting ensures all dynamic linked libraries (<code class="text-amber-400 font-mono">.dll</code>) and config dependencies load into runtime memory:
+        </p>
+        <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2 text-xs font-mono text-slate-300">
+          <p><span class="text-slate-500">1.</span> Right-click the downloaded <code>.zip</code> or <code>.rar</code> file.</p>
+          <p><span class="text-slate-500">2.</span> Select <strong>Extract to "GSM_Tool_v2.4.0/"</strong> using 7-Zip or WinRAR.</p>
+          <p><span class="text-slate-500">3.</span> If prompted for an archive password, enter: <span class="text-amber-400 font-bold">12345</span></p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="h-7 w-7 rounded-full bg-blue-600/20 border border-blue-500 text-blue-400 font-mono font-bold text-sm flex items-center justify-center">3</span>
+          <h2 class="text-lg font-bold text-white">Driver Setup & Port Verification</h2>
+        </div>
+        <p class="text-sm text-slate-300 mb-3">
+          Most flashing failures occur due to handshake drops over USB. Confirm port enumeration inside <strong>Device Manager</strong>:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="bg-slate-950/60 p-3 rounded border border-slate-800">
+            <span class="text-blue-400 font-semibold block mb-1">Qualcomm Mode</span>
+            <span class="text-slate-400">Must show under Ports (COM & LPT) as:</span>
+            <p class="font-mono text-slate-200 mt-1 font-semibold">Qualcomm HS-USB QDLoader 9008</p>
+          </div>
+          <div class="bg-slate-950/60 p-3 rounded border border-slate-800">
+            <span class="text-blue-400 font-semibold block mb-1">MediaTek (MTK) Mode</span>
+            <span class="text-slate-400">Must enumerate briefly or stably as:</span>
+            <p class="font-mono text-slate-200 mt-1 font-semibold">MediaTek USB Port (VCOM)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="h-7 w-7 rounded-full bg-blue-600/20 border border-blue-500 text-blue-400 font-mono font-bold text-sm flex items-center justify-center">4</span>
+          <h2 class="text-lg font-bold text-white">Launching the Tool</h2>
+        </div>
+        <p class="text-sm text-slate-300">
+          Locate the primary executable file, right-click it, and select <strong>Run as administrator</strong>. Running with standard privileges may prevent the software from accessing raw serial COM ports or writing partition buffers.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Troubleshooting Box -->
+    <section class="bg-amber-950/20 border border-amber-800/60 rounded-xl p-6">
+      <h3 class="text-base font-bold text-amber-400 mb-2">Common Troubleshooting</h3>
+      <div class="space-y-3 text-xs text-slate-300">
+        <div>
+          <strong class="text-slate-100">Issue: "Device not detected" or device connects and disconnects immediately:</strong>
+          <p class="text-slate-400 mt-0.5">Ensure you are using a certified high-speed USB data cable plugged directly into a motherboard rear USB 2.0 port rather than a USB hub or front-panel header.</p>
+        </div>
+        <div>
+          <strong class="text-slate-100">Issue: Missing MSVCP140.dll or VCRUNTIME140.dll error:</strong>
+          <p class="text-slate-400 mt-0.5">Install both the x86 and x64 Visual C++ Redistributable runtimes and restart your computer.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 text-slate-500 py-6 text-xs text-center">
+    <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
+      <p>© 2026 GSM Tools Hub. All rights reserved.</p>
+      <a href="index.html" class="hover:text-slate-300">Home</a>
+    </div>
+  </footer>
+
+</body>
+</html>
